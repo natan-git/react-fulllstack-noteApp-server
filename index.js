@@ -26,10 +26,6 @@ app.use(
   })
 );
 
-
-
-
-
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'public')));
 } else {
