@@ -30,26 +30,20 @@ app.use(
 
 
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.resolve(__dirname, 'public')));
-// } else {
-//   var allowCrossDomain = function (req, res, next) {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//     res.header('Access-Control-Allow-Headers', 'Content-Type');
-//     next();
-//   };
-//   app.use(allowCrossDomain);
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.resolve(__dirname, 'public')));
+} else {
+  var allowCrossDomain = function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  };
+  app.use(allowCrossDomain);
+}
 
 noteRoutes(app);
 
-app.use(express.static(path.join(__dirname, 'build')));
--app.get('/', function (req, res) {
-+app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
- });
- 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`server started on port ${PORT}`));
