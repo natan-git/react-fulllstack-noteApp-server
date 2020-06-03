@@ -8,7 +8,8 @@ const noteRoutes = require('./routes/noteRoutes');
 
 const app = express();
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.json());
 app.use(bodyParser.json()); // create the req.body object - from json
 app.use(bodyParser.urlencoded({ extended: false })); // create the req.body object
