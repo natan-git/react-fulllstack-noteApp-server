@@ -4,8 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 const url = (false && process.env.NODE_ENV === 'production') ?
     'mongodb+srv://natan:skate4life@cluster0-u9ykt.mongodb.net/test?retryWrites=true&w=majority'
     : 'mongodb://localhost:27017';
-// const url = 'mongodb+srv://natan:skate4life@cluster0-u9ykt.mongodb.net/test?retryWrites=true&w=majority'
-// Database Name
+
 const dbName = 'note_db';
 var dbConn = null;
 
