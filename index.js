@@ -1,9 +1,9 @@
-const path = require('path');
 const express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-const session = require('express-session');
-const passport = require('passport');
+// const session = require('express-session');
+// const passport = require('passport');
+// const path = require('path');
 const noteRoutes = require('./routes/noteRoutes');
 const cors = require('cors');
 
@@ -15,8 +15,8 @@ app.use(bodyParser.json()); // create the req.body object - from json
 app.use(bodyParser.urlencoded({ extended: false })); // create the req.body object
 app.use(cookieParser());
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 app.use(
   session({
