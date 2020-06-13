@@ -9,7 +9,6 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.static('public'));
 app.use(express.json());
 app.use(bodyParser.json()); // create the req.body object - from json
 app.use(bodyParser.urlencoded({ extended: false })); // create the req.body object
@@ -27,12 +26,24 @@ app.use(
   })
 );
 
-const corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials: true
-};
 
-app.use(cors(corsOptions));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.resolve(__dirname, 'public')));
+} else {
+  const corsOptions = {
+      origin: ['http://127.0.0.1:5000', 'http://localhost:5000', 'http://127.0.0.1:3000', 'http://localhost:3000'],
+      credentials: true
+  };
+  app.use(cors(corsOptions));
+}
+
+
+// const corsOptions = {
+//   origin: 'http://localhost:3000',
+//   credentials: true
+// };
+
+
 
 // if (process.env.NODE_ENV === 'production') {
 //   app.use(express.static('public'));
@@ -49,6 +60,9 @@ app.use(cors(corsOptions));
 // }
 
 noteRoutes(app);
+app.get('/*',function(req,res){
+  res.sendFile(path.resolve(__dirname,'public/index.html'))
+})
 
 const PORT = process.env.PORT || 5000;
 
