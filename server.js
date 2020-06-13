@@ -37,9 +37,9 @@ if (process.env.NODE_ENV === 'production') {
     next();
   };
   app.use(allowCrossDomain);
-  
+
   const corsOptions = {
-      origin: ['http://127.0.0.1:5000', 'http://localhost:5000', 'http://127.0.0.1:3000', 'http://localhost:3000'],
+      origin: ['https://hidden-refuge-74609.herokuapp.com','http://localhost:5000','http://127.0.0.1:5000', 'http://localhost:5000', 'http://127.0.0.1:3000', 'http://localhost:3000'],
       credentials: true
   };
   app.use(cors(corsOptions));
