@@ -1,7 +1,7 @@
 const noteService = require('../services/noteService');
 
 module.exports = (app) => {
-  app.get('https://hidden-refuge-74609.herokuapp.com/api/note', (req, res) => {
+  app.get('/api/note', (req, res) => {
     const filterBy = req.query;
 
     noteService
