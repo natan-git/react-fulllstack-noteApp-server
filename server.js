@@ -28,6 +28,7 @@ app.use(
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'public')));
+} else {
   var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -35,11 +36,9 @@ if (process.env.NODE_ENV === 'production') {
     next();
   };
   app.use(allowCrossDomain);
-} else {
+
   const corsOptions = {
     origin: [
-      'https://hidden-refuge-74609.herokuapp.com',
-      'http://localhost:5000',
       'http://127.0.0.1:5000',
       'http://localhost:5000',
       'http://127.0.0.1:3000',
