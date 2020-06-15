@@ -3,7 +3,6 @@ const noteService = require('../services/noteService');
 module.exports = (app) => {
   app.get('/api/note', (req, res) => {
     const filterBy = req.query;
-
     noteService
       .query(filterBy)
       .then((notes) => {
