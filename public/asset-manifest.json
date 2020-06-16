@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4a10ded.chunk.css",
-    "main.js": "/static/js/main.a008e3ab.chunk.js",
-    "main.js.map": "/static/js/main.a008e3ab.chunk.js.map",
+    "main.css": "/static/css/main.1e948586.chunk.css",
+    "main.js": "/static/js/main.8475c6b4.chunk.js",
+    "main.js.map": "/static/js/main.8475c6b4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.98a2b520.js",
     "runtime-main.js.map": "/static/js/runtime-main.98a2b520.js.map",
-    "static/js/2.da233603.chunk.js": "/static/js/2.da233603.chunk.js",
-    "static/js/2.da233603.chunk.js.map": "/static/js/2.da233603.chunk.js.map",
+    "static/js/2.9dcca477.chunk.js": "/static/js/2.9dcca477.chunk.js",
+    "static/js/2.9dcca477.chunk.js.map": "/static/js/2.9dcca477.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.128182e283a215d3a60d1cfa6e007897.js": "/precache-manifest.128182e283a215d3a60d1cfa6e007897.js",
+    "precache-manifest.2292e543b6fd2a8eb791478ed76216f0.js": "/precache-manifest.2292e543b6fd2a8eb791478ed76216f0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.d4a10ded.chunk.css.map": "/static/css/main.d4a10ded.chunk.css.map",
-    "static/js/2.da233603.chunk.js.LICENSE.txt": "/static/js/2.da233603.chunk.js.LICENSE.txt",
+    "static/css/main.1e948586.chunk.css.map": "/static/css/main.1e948586.chunk.css.map",
+    "static/js/2.9dcca477.chunk.js.LICENSE.txt": "/static/js/2.9dcca477.chunk.js.LICENSE.txt",
     "static/media/back.011c0bd9.svg": "/static/media/back.011c0bd9.svg",
-    "static/media/bg-pattern-home-1.svg": "/static/media/bg-pattern-home-1.e45a3d0d.svg",
-    "static/media/bg-pattern-home-2.svg": "/static/media/bg-pattern-home-2.2fd804c4.svg",
     "static/media/delete.50b1c575.svg": "/static/media/delete.50b1c575.svg",
     "static/media/edit.2dc042ea.svg": "/static/media/edit.2dc042ea.svg",
+    "static/media/icons8-mongodb.svg": "/static/media/icons8-mongodb.cfee114b.svg",
+    "static/media/icons8-nodejs.svg": "/static/media/icons8-nodejs.9d7b3072.svg",
+    "static/media/icons8-react.svg": "/static/media/icons8-react.1932d407.svg",
+    "static/media/icons8-redux.svg": "/static/media/icons8-redux.7f067025.svg",
+    "static/media/icons8-sass.svg": "/static/media/icons8-sass.cb160800.svg",
     "static/media/painting.8565e751.svg": "/static/media/painting.8565e751.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.98a2b520.js",
-    "static/js/2.da233603.chunk.js",
-    "static/css/main.d4a10ded.chunk.css",
-    "static/js/main.a008e3ab.chunk.js"
+    "static/js/2.9dcca477.chunk.js",
+    "static/css/main.1e948586.chunk.css",
+    "static/js/main.8475c6b4.chunk.js"
   ]
 }
